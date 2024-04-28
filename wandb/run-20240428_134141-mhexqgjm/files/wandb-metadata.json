@@ -1,0 +1,202 @@
+{
+    "os": "Linux-6.5.0-28-generic-x86_64-with-glibc2.35",
+    "python": "3.11.6",
+    "heartbeatAt": "2024-04-28T17:41:41.558861",
+    "startedAt": "2024-04-28T17:41:41.183035",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "jennam16",
+    "username": "jennakang",
+    "executable": "/home/jennakang/.conda/envs/octree-gs/bin/python",
+    "cpu_count": 16,
+    "cpu_count_logical": 32,
+    "cpu_freq": {
+        "current": 3986.830812500001,
+        "min": 400.0,
+        "max": 5461.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 5164.475,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4551.859,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5331.064,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4997.226,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5168.081,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5169.746,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 3425.414,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5061.687,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5164.979,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4990.754,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 5159.135,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4564.929,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4925.332,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4989.571,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4933.86,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4852.907,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4575.43,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4866.349,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 3323.835,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4906.595,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4562.184,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4940.076,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4656.144,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4940.312,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 4899.687,
+            "min": 400.0,
+            "max": 5461.0
+        },
+        {
+            "current": 400.0,
+            "min": 400.0,
+            "max": 5461.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1248.5300521850586,
+            "used": 515.6923484802246
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+            "memory_total": 17171480576
+        }
+    ],
+    "memory": {
+        "total": 30.523273468017578
+    }
+}

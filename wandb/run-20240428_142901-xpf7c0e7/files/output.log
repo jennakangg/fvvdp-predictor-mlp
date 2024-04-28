@@ -1,0 +1,28 @@
+
+Epoch 1/50, Train Loss: 1.2480691627758305
+Epoch 1/50, Validation Loss: 0.8167920362564826
+Epoch 2/50, Train Loss: 0.7734452357621697
+Epoch 2/50, Validation Loss: 0.49176567216073314
+Traceback (most recent call last):
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 105, in <module>
+    main()
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 99, in main
+    train_model(model, train_loader, valid_loader, criterion, optimizer, num_epochs=config['epochs'])
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 37, in train_model
+    for idx, batch in enumerate(train_loader):
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/data/preprocess.py", line 26, in prepare_inputs_and_targets
+    cam_pos = list_to_tensor_3d(item['camera_position'], device=device)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/data/preprocess.py", line 10, in list_to_tensor_3d
+    tensor = torch.tensor(numbers, dtype=torch.float32, device=device)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

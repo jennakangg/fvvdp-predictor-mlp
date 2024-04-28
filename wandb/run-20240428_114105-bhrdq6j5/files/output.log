@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 89, in <module>
+    main()
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 83, in main
+    train_model(model, train_loader, valid_loader, criterion, optimizer, num_epochs=config['epochs'])
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 34, in train_model
+    inputs, targets = prepare_inputs_and_targets(batch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/data/preprocess.py", line 23, in prepare_inputs_and_targets
+    inputs = torch.cat([cam_pos, cam_dir, eccentricity, theta], dim=1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected Tensor as element 0 in argument 0, but got list

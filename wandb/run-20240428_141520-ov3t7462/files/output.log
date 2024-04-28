@@ -1,0 +1,44 @@
+
+Epoch 1/50, Train Loss: 1.8755839597888109
+Epoch 1/50, Validation Loss: 1.4430211167181692
+Epoch 2/50, Train Loss: 1.155563829875574
+Epoch 2/50, Validation Loss: 0.9194879512633046
+Epoch 3/50, Train Loss: 0.781649123847
+Epoch 3/50, Validation Loss: 0.6822749433978912
+Epoch 4/50, Train Loss: 0.5927175130785965
+Epoch 4/50, Validation Loss: 0.5411533819090936
+Epoch 5/50, Train Loss: 0.4938919183199968
+Epoch 5/50, Validation Loss: 0.4675442922499872
+Epoch 6/50, Train Loss: 0.43689881107671474
+Epoch 6/50, Validation Loss: 0.4325123362002834
+Epoch 7/50, Train Loss: 0.40354726542302266
+Epoch 7/50, Validation Loss: 0.40085562967484994
+Traceback (most recent call last):
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 105, in <module>
+    main()
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 99, in main
+    train_model(model, train_loader, valid_loader, criterion, optimizer, num_epochs=config['epochs'])
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 37, in train_model
+    for idx, batch in enumerate(train_loader):
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataset.py", line 399, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataset.py", line 399, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/dataset/lod_fvvdp_eccentricity.py", line 54, in __getitem__
+    lod_n_patch = torch.load(lod_n_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/serialization.py", line 1005, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

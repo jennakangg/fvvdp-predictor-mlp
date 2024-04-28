@@ -1,0 +1,65 @@
+
+Epoch 1/50, Train Loss: 1.7617246416526111
+Epoch 1/50, Validation Loss: 0.47702229695935405
+Epoch 2/50, Train Loss: 1.4141181358476964
+Epoch 2/50, Validation Loss: 0.3707100691333894
+Epoch 3/50, Train Loss: 1.2883652002830817
+Epoch 3/50, Validation Loss: 0.330128982182472
+Epoch 4/50, Train Loss: 1.1466927853057054
+Epoch 4/50, Validation Loss: 0.31567137375954657
+Epoch 5/50, Train Loss: 1.076161613793877
+Epoch 5/50, Validation Loss: 0.3021879297110342
+Epoch 6/50, Train Loss: 1.0116020528281606
+Epoch 6/50, Validation Loss: 0.29536317385012106
+Epoch 7/50, Train Loss: 0.9327963333788926
+Epoch 7/50, Validation Loss: 0.28710457105790416
+Epoch 8/50, Train Loss: 0.888295579731949
+Epoch 8/50, Validation Loss: 0.2846325857024039
+Epoch 9/50, Train Loss: 0.8301149582475181
+Epoch 9/50, Validation Loss: 0.27740930549560056
+Epoch 10/50, Train Loss: 0.7952638418693853
+Epoch 10/50, Validation Loss: 0.2754651913719793
+Epoch 11/50, Train Loss: 0.7381004264684228
+Epoch 11/50, Validation Loss: 0.2728823567590406
+Epoch 12/50, Train Loss: 0.7051437259689579
+Epoch 12/50, Validation Loss: 0.2702512467099774
+Epoch 13/50, Train Loss: 0.6470938974279699
+Epoch 13/50, Validation Loss: 0.2679212131807881
+Epoch 14/50, Train Loss: 0.6293089249269749
+Epoch 14/50, Validation Loss: 0.26811410582834677
+Epoch 15/50, Train Loss: 0.5978206509981698
+Epoch 15/50, Validation Loss: 0.26629671550566153
+Epoch 16/50, Train Loss: 0.5862947084554812
+Epoch 16/50, Validation Loss: 0.26472747037487643
+Traceback (most recent call last):
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 105, in <module>
+    main()
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 99, in main
+    train_model(model, train_loader, valid_loader, criterion, optimizer, num_epochs=config['epochs'])
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 37, in train_model
+    for idx, batch in enumerate(train_loader):
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataset.py", line 399, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataset.py", line 399, in <listcomp>
+    return [self.dataset[self.indices[idx]] for idx in indices]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/dataset/lod_fvvdp_eccentricity.py", line 54, in __getitem__
+    lod_n_patch = torch.load(lod_n_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/serialization.py", line 1005, in load
+    with _open_zipfile_reader(opened_file) as opened_zipfile:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/serialization.py", line 457, in __init__
+    super().__init__(torch._C.PyTorchFileReader(name_or_buffer))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

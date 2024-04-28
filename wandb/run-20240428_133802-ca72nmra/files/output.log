@@ -1,0 +1,40 @@
+
+Epoch 1/50, Train Loss: 0.3583778343638595
+Epoch 1/50, Validation Loss: 0.25225249870169547
+Epoch 2/50, Train Loss: 0.2585674610673165
+Epoch 2/50, Validation Loss: 0.24577283330502048
+Epoch 3/50, Train Loss: 0.24903666659885523
+Epoch 3/50, Validation Loss: 0.2406802150991655
+Epoch 4/50, Train Loss: 0.24188140235385117
+Epoch 4/50, Validation Loss: 0.24350502918804845
+Epoch 5/50, Train Loss: 0.2386172655285621
+Epoch 5/50, Validation Loss: 0.23968855483878043
+Epoch 6/50, Train Loss: 0.23740418063742774
+Epoch 6/50, Validation Loss: 0.23517170836848597
+Epoch 7/50, Train Loss: 0.23404822963841107
+Epoch 7/50, Validation Loss: 0.2362006768103569
+Epoch 8/50, Train Loss: 0.23153947108254141
+Epoch 8/50, Validation Loss: 0.23519004592972417
+Epoch 9/50, Train Loss: 0.23219263465428838
+Epoch 9/50, Validation Loss: 0.2311117872595787
+Epoch 10/50, Train Loss: 0.22744460270112873
+Epoch 10/50, Validation Loss: 0.22686729147549597
+Traceback (most recent call last):
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 94, in <module>
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 88, in main
+    # Define loss function and optimizer
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py", line 35, in train_model
+    running_loss = 0.0
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/.conda/envs/octree-gs/lib/python3.11/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/data/preprocess.py", line 31, in prepare_inputs_and_targets
+    lod_x = torch.tensor([item['lod_x']], dtype=torch.float32, device=device).unsqueeze(0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

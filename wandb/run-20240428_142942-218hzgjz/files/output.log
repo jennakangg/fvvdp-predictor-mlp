@@ -1,0 +1,13 @@
+
+Epoch 1/50, Train Loss: 1.6380424838725145
+Epoch 1/50, Validation Loss: 1.079934746988358
+Epoch 2/50, Train Loss: 1.0252874488753032
+Epoch 2/50, Validation Loss: 0.647758383904734
+Epoch 3/50, Train Loss: 0.7008969415494097
+Epoch 3/50, Validation Loss: 0.4365742571892277
+Epoch 4/50, Train Loss: 0.5661544017190856
+Epoch 4/50, Validation Loss: 0.34589800238609314
+Epoch 5/50, Train Loss: 0.49736915516659497
+Epoch 5/50, Validation Loss: 0.3085936274259321
+Epoch 6/50, Train Loss: 0.47835665359729673
+Epoch 6/50, Validation Loss: 0.2947080731391907

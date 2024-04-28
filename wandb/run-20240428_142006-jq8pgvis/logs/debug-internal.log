@@ -1,0 +1,530 @@
+2024-04-28 14:20:06,429 INFO    StreamThr :14190 [internal.py:wandb_internal():86] W&B internal server running at pid: 14190, started at: 2024-04-28 14:20:06.428919
+2024-04-28 14:20:06,430 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status
+2024-04-28 14:20:06,430 INFO    WriterThread:14190 [datastore.py:open_for_write():87] open: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/run-jq8pgvis.wandb
+2024-04-28 14:20:06,430 DEBUG   SenderThread:14190 [sender.py:send():379] send: header
+2024-04-28 14:20:06,430 DEBUG   SenderThread:14190 [sender.py:send():379] send: run
+2024-04-28 14:20:06,593 INFO    SenderThread:14190 [dir_watcher.py:__init__():211] watching files in: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files
+2024-04-28 14:20:06,593 INFO    SenderThread:14190 [sender.py:_start_run_threads():1124] run started: jq8pgvis with start time 1714328406.428664
+2024-04-28 14:20:06,595 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: check_version
+2024-04-28 14:20:06,596 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: check_version
+2024-04-28 14:20:06,649 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: run_start
+2024-04-28 14:20:06,655 DEBUG   HandlerThread:14190 [system_info.py:__init__():26] System info init
+2024-04-28 14:20:06,655 DEBUG   HandlerThread:14190 [system_info.py:__init__():41] System info init done
+2024-04-28 14:20:06,655 INFO    HandlerThread:14190 [system_monitor.py:start():194] Starting system monitor
+2024-04-28 14:20:06,655 INFO    SystemMonitor:14190 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-28 14:20:06,655 INFO    HandlerThread:14190 [system_monitor.py:probe():214] Collecting system info
+2024-04-28 14:20:06,656 INFO    SystemMonitor:14190 [interfaces.py:start():190] Started cpu monitoring
+2024-04-28 14:20:06,656 INFO    SystemMonitor:14190 [interfaces.py:start():190] Started disk monitoring
+2024-04-28 14:20:06,657 INFO    SystemMonitor:14190 [interfaces.py:start():190] Started gpu monitoring
+2024-04-28 14:20:06,657 INFO    SystemMonitor:14190 [interfaces.py:start():190] Started memory monitoring
+2024-04-28 14:20:06,657 INFO    SystemMonitor:14190 [interfaces.py:start():190] Started network monitoring
+2024-04-28 14:20:06,663 DEBUG   HandlerThread:14190 [system_info.py:probe():150] Probing system
+2024-04-28 14:20:06,664 DEBUG   HandlerThread:14190 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-28 14:20:06,664 DEBUG   HandlerThread:14190 [system_info.py:probe():198] Probing system done
+2024-04-28 14:20:06,664 DEBUG   HandlerThread:14190 [system_monitor.py:probe():223] {'os': 'Linux-6.5.0-28-generic-x86_64-with-glibc2.35', 'python': '3.11.6', 'heartbeatAt': '2024-04-28T18:20:06.663894', 'startedAt': '2024-04-28T18:20:06.426992', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/train.py', 'codePathLocal': 'train.py', 'codePath': 'train.py', 'host': 'jennam16', 'username': 'jennakang', 'executable': '/home/jennakang/.conda/envs/octree-gs/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2062.213375, 'min': 400.0, 'max': 5461.0}, 'cpu_freq_per_core': [{'current': 3508.611, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 4847.149, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 4909.646, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 5106.131, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 5255.552, 'min': 400.0, 'max': 5461.0}, {'current': 4629.035, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 4961.987, 'min': 400.0, 'max': 5461.0}, {'current': 5207.376, 'min': 400.0, 'max': 5461.0}, {'current': 3433.445, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 4988.645, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 3321.383, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 4977.305, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 3326.178, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}, {'current': 3328.164, 'min': 400.0, 'max': 5461.0}, {'current': 3595.668, 'min': 400.0, 'max': 5461.0}, {'current': 3348.96, 'min': 400.0, 'max': 5461.0}, {'current': 400.0, 'min': 400.0, 'max': 5461.0}], 'disk': {'/': {'total': 1248.5300521850586, 'used': 516.0582847595215}}, 'gpu': 'NVIDIA GeForce RTX 4090 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090 Laptop GPU', 'memory_total': 17171480576}], 'memory': {'total': 30.523273468017578}}
+2024-04-28 14:20:06,664 INFO    HandlerThread:14190 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-28 14:20:06,664 INFO    HandlerThread:14190 [system_monitor.py:probe():227] Publishing system info
+2024-04-28 14:20:06,664 DEBUG   HandlerThread:14190 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-28 14:20:07,593 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/conda-environment.yaml
+2024-04-28 14:20:08,231 DEBUG   HandlerThread:14190 [system_info.py:_save_conda():222] Saving conda packages done
+2024-04-28 14:20:08,231 INFO    HandlerThread:14190 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-28 14:20:08,232 DEBUG   SenderThread:14190 [sender.py:send():379] send: files
+2024-04-28 14:20:08,232 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-metadata.json with policy now
+2024-04-28 14:20:08,271 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-28 14:20:08,271 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: python_packages
+2024-04-28 14:20:08,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:20:08,272 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:20:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:20:08,448 DEBUG   SenderThread:14190 [sender.py:send():379] send: telemetry
+2024-04-28 14:20:08,583 INFO    wandb-upload_0:14190 [upload_job.py:push():131] Uploaded file /tmp/tmpmik9_ph5wandb/m0ieyo56-wandb-metadata.json
+2024-04-28 14:20:08,593 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/conda-environment.yaml
+2024-04-28 14:20:08,593 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-metadata.json
+2024-04-28 14:20:08,593 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/requirements.txt
+2024-04-28 14:20:11,448 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:16,448 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:21,449 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:23,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:20:23,272 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:20:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:20:25,261 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:20:25,262 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:20:25,262 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:20:25,262 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:20:25,596 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:20:25,597 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_created():271] file/dir created: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:20:27,309 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:27,597 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:20:29,433 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:20:29,434 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:20:29,434 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:20:29,435 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:20:29,597 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:20:31,598 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:20:32,435 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:37,437 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:37,599 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/config.yaml
+2024-04-28 14:20:38,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:20:38,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:20:38,272 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:20:43,348 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:45,835 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:20:45,835 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:20:45,835 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:20:45,836 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:20:46,601 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:20:47,601 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:20:48,880 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:49,866 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:20:49,867 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:20:49,867 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:20:49,867 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:20:50,602 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:20:51,602 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:20:53,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:20:53,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:20:53,272 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:20:54,396 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:20:59,396 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:04,397 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:06,098 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:06,098 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:06,098 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:06,099 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:06,605 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:06,658 DEBUG   SystemMonitor:14190 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-28 14:21:06,658 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:21:07,605 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:21:08,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:21:08,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:21:09,469 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:10,127 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:10,127 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:10,127 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:10,127 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:10,606 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:11,606 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:15,169 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:20,169 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:23,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:21:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:21:23,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:21:25,522 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:26,336 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:26,336 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:26,336 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:26,337 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:26,609 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:27,609 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:30,248 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:30,248 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:30,249 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:30,249 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:30,610 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:31,249 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:31,610 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:36,250 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:36,659 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:21:38,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:21:38,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:21:38,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:21:41,375 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:46,375 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:46,418 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:46,419 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:46,419 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:46,419 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:46,613 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:47,613 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:50,547 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:21:50,548 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:21:50,548 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:21:50,548 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:21:50,614 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:21:51,548 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:21:51,614 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:21:53,272 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:21:53,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:21:53,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:21:56,628 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:01,629 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:06,601 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:06,601 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:06,601 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:06,601 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:06,617 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:06,644 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:06,659 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:22:07,617 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:22:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:22:08,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:22:10,665 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:10,665 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:10,665 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:10,665 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:11,618 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:11,618 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:11,708 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:16,709 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:21,709 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:23,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:22:23,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:22:23,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:22:26,952 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:26,952 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:26,952 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:26,952 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:26,953 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:27,621 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:29,622 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:30,896 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:30,897 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:30,897 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:30,897 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:31,622 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:32,897 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:33,622 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:36,660 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:22:38,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:22:38,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:22:38,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:22:38,479 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:43,480 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:47,150 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:47,150 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:47,150 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:47,151 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:47,625 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:49,192 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:49,626 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:51,243 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:22:51,244 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:22:51,244 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:22:51,244 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:22:51,626 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:22:53,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:22:53,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:22:53,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:22:53,626 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:22:54,535 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:22:59,535 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:04,536 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:06,660 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:23:07,485 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:07,486 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:07,486 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:07,486 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:07,629 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:23:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:23:08,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:23:09,630 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:10,429 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:11,609 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:11,610 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:11,610 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:11,610 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:11,630 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:13,631 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:15,653 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:20,653 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:23,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:23:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:23:23,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:23:26,638 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:27,669 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:27,670 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:27,670 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:27,670 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:28,634 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:29,634 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:31,713 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:31,725 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:31,725 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:31,725 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:31,725 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:32,634 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:33,635 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:36,660 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:23:37,661 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:38,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:23:38,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:23:38,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:23:42,692 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:47,692 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:47,822 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:47,823 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:47,823 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:47,823 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:48,638 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:49,638 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:51,830 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:23:51,831 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:23:51,831 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:23:51,831 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:23:52,639 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:23:52,831 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:23:53,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:23:53,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:23:53,275 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:23:53,639 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:23:58,768 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:03,768 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:06,661 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:24:08,120 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:08,120 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:08,120 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:08,121 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:08,273 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:24:08,273 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:24:08,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:24:08,642 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:09,380 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:09,642 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:12,165 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:12,166 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:12,166 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:12,166 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:12,642 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:13,643 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:15,208 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:20,209 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:24:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:24:23,275 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:24:25,419 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:28,602 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:28,603 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:28,603 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:28,604 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:28,646 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:29,646 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:30,648 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:32,729 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:32,729 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:32,729 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:32,729 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:33,647 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:33,647 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:35,730 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:36,661 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:24:38,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:24:38,275 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:24:38,275 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:24:41,595 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:46,596 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:49,044 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:49,044 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:49,044 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:49,044 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:49,650 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:51,650 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:52,084 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:24:53,118 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:24:53,118 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:24:53,118 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:24:53,119 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:24:53,275 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:24:53,275 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:24:53,275 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:24:53,651 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:24:55,651 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:24:57,648 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:02,649 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:06,661 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:25:07,662 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:08,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:25:08,275 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:25:08,276 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:25:09,447 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:09,447 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:09,447 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:09,448 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:09,654 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:11,654 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:13,489 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:13,548 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:13,548 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:13,548 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:13,548 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:13,655 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:15,655 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:18,549 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:23,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:25:23,275 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:25:23,276 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:25:24,447 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:29,448 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:29,584 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:29,585 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:29,585 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:29,585 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:29,658 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:31,658 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:33,626 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:33,626 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:33,626 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:33,626 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:33,659 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:34,627 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:35,659 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:36,662 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:25:38,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:25:38,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:25:38,275 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:25:40,366 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:45,367 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:49,652 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:49,652 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:49,652 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:49,653 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:49,662 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:50,696 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:51,663 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:53,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-28 14:25:53,274 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: stop_status
+2024-04-28 14:25:53,274 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:25:53,710 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-28 14:25:53,710 DEBUG   SenderThread:14190 [sender.py:send():379] send: history
+2024-04-28 14:25:53,710 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: summary_record
+2024-04-28 14:25:53,710 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:54,663 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:25:55,664 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:25:55,756 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:59,871 DEBUG   SenderThread:14190 [sender.py:send():379] send: exit
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:send_exit():586] handling exit code: 255
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:send_exit():588] handling runtime: 353
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:send_exit():594] send defer
+2024-04-28 14:25:59,871 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,871 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-28 14:25:59,871 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 1
+2024-04-28 14:25:59,871 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,871 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-28 14:25:59,871 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-04-28 14:25:59,871 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 2
+2024-04-28 14:25:59,871 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,871 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-28 14:25:59,871 INFO    HandlerThread:14190 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-28 14:25:59,871 DEBUG   SystemMonitor:14190 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-28 14:25:59,872 DEBUG   SystemMonitor:14190 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-28 14:25:59,872 INFO    HandlerThread:14190 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-28 14:25:59,872 INFO    HandlerThread:14190 [interfaces.py:finish():202] Joined disk monitor
+2024-04-28 14:25:59,912 INFO    HandlerThread:14190 [interfaces.py:finish():202] Joined gpu monitor
+2024-04-28 14:25:59,912 INFO    HandlerThread:14190 [interfaces.py:finish():202] Joined memory monitor
+2024-04-28 14:25:59,912 INFO    HandlerThread:14190 [interfaces.py:finish():202] Joined network monitor
+2024-04-28 14:25:59,912 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,912 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-04-28 14:25:59,912 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 3
+2024-04-28 14:25:59,912 DEBUG   SenderThread:14190 [sender.py:send():379] send: stats
+2024-04-28 14:25:59,913 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,913 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-28 14:25:59,913 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 4
+2024-04-28 14:25:59,913 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,913 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-28 14:25:59,913 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 5
+2024-04-28 14:25:59,913 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,913 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-28 14:25:59,913 DEBUG   SenderThread:14190 [sender.py:send():379] send: summary
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:_save_file():1390] saving file wandb-summary.json with policy end
+2024-04-28 14:25:59,913 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 6
+2024-04-28 14:25:59,913 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,913 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-28 14:25:59,913 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-04-28 14:25:59,913 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 7
+2024-04-28 14:25:59,914 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: status_report
+2024-04-28 14:25:59,914 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:25:59,914 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-28 14:25:59,914 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:25:59,914 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-04-28 14:26:00,665 INFO    Thread-12 :14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:26:00,869 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-28 14:26:01,870 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 8
+2024-04-28 14:26:01,870 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: poll_exit
+2024-04-28 14:26:01,870 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:01,871 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-28 14:26:01,871 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [job_builder.py:build():318] Attempting to build job artifact
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [job_builder.py:_get_source_type():466] no source found
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 9
+2024-04-28 14:26:01,871 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:01,871 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-28 14:26:01,871 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-04-28 14:26:01,871 INFO    SenderThread:14190 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-28 14:26:02,665 INFO    SenderThread:14190 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:26:02,665 INFO    SenderThread:14190 [dir_watcher.py:finish():388] scan: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files
+2024-04-28 14:26:02,665 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json wandb-summary.json
+2024-04-28 14:26:02,666 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log output.log
+2024-04-28 14:26:02,666 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/requirements.txt requirements.txt
+2024-04-28 14:26:02,667 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-metadata.json wandb-metadata.json
+2024-04-28 14:26:02,667 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/config.yaml config.yaml
+2024-04-28 14:26:02,667 INFO    SenderThread:14190 [dir_watcher.py:finish():402] scan save: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/conda-environment.yaml conda-environment.yaml
+2024-04-28 14:26:02,669 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 10
+2024-04-28 14:26:02,669 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:02,669 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-28 14:26:02,670 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:02,670 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-04-28 14:26:02,670 INFO    SenderThread:14190 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-28 14:26:02,870 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-28 14:26:02,871 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: poll_exit
+2024-04-28 14:26:02,936 INFO    wandb-upload_0:14190 [upload_job.py:push():131] Uploaded file /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/output.log
+2024-04-28 14:26:02,988 INFO    wandb-upload_1:14190 [upload_job.py:push():131] Uploaded file /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/wandb-summary.json
+2024-04-28 14:26:03,042 INFO    wandb-upload_2:14190 [upload_job.py:push():131] Uploaded file /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/requirements.txt
+2024-04-28 14:26:03,055 INFO    wandb-upload_3:14190 [upload_job.py:push():131] Uploaded file /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/config.yaml
+2024-04-28 14:26:03,056 INFO    wandb-upload_4:14190 [upload_job.py:push():131] Uploaded file /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/files/conda-environment.yaml
+2024-04-28 14:26:03,256 INFO    Thread-11 (_thread_body):14190 [sender.py:transition_state():614] send defer: 11
+2024-04-28 14:26:03,256 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:03,256 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-28 14:26:03,256 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:03,256 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-04-28 14:26:03,257 INFO    SenderThread:14190 [file_pusher.py:join():178] waiting for file pusher
+2024-04-28 14:26:03,257 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 12
+2024-04-28 14:26:03,257 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:03,257 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-28 14:26:03,257 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:03,257 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-04-28 14:26:03,257 INFO    SenderThread:14190 [file_stream.py:finish():614] file stream finish called
+2024-04-28 14:26:03,483 INFO    SenderThread:14190 [file_stream.py:finish():618] file stream finish is done
+2024-04-28 14:26:03,483 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 13
+2024-04-28 14:26:03,483 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:03,483 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-28 14:26:03,483 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:03,483 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-04-28 14:26:03,483 INFO    SenderThread:14190 [sender.py:transition_state():614] send defer: 14
+2024-04-28 14:26:03,483 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: defer
+2024-04-28 14:26:03,483 INFO    HandlerThread:14190 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-28 14:26:03,484 DEBUG   SenderThread:14190 [sender.py:send():379] send: final
+2024-04-28 14:26:03,484 DEBUG   SenderThread:14190 [sender.py:send():379] send: footer
+2024-04-28 14:26:03,484 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: defer
+2024-04-28 14:26:03,484 INFO    SenderThread:14190 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-04-28 14:26:03,484 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-28 14:26:03,484 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: poll_exit
+2024-04-28 14:26:03,484 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-28 14:26:03,484 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: poll_exit
+2024-04-28 14:26:03,484 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: server_info
+2024-04-28 14:26:03,485 DEBUG   SenderThread:14190 [sender.py:send_request():406] send_request: server_info
+2024-04-28 14:26:03,485 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-28 14:26:03,486 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-28 14:26:03,486 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-28 14:26:03,525 INFO    MainThread:14190 [wandb_run.py:_footer_history_summary_info():3936] rendering history
+2024-04-28 14:26:03,525 INFO    MainThread:14190 [wandb_run.py:_footer_history_summary_info():3968] rendering summary
+2024-04-28 14:26:03,525 INFO    MainThread:14190 [wandb_run.py:_footer_sync_info():3895] logging synced files
+2024-04-28 14:26:03,525 DEBUG   HandlerThread:14190 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-28 14:26:03,526 INFO    HandlerThread:14190 [handler.py:finish():866] shutting down handler
+2024-04-28 14:26:04,485 INFO    WriterThread:14190 [datastore.py:close():296] close: /home/jennakang/NYU/research/gaussianperception/LOD_Patch_MLP/wandb/run-20240428_142006-jq8pgvis/run-jq8pgvis.wandb
+2024-04-28 14:26:04,525 INFO    SenderThread:14190 [sender.py:finish():1546] shutting down sender
+2024-04-28 14:26:04,525 INFO    SenderThread:14190 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-28 14:26:04,525 INFO    SenderThread:14190 [file_pusher.py:join():178] waiting for file pusher

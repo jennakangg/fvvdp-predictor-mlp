@@ -1,2 +1,4 @@
-dataset/
+dataset/playroom*
 wandb/
+archived/
+checkpoints/

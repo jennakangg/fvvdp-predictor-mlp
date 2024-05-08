@@ -25,3 +25,4 @@ config: {'input_dim': 5, 'output_dim': 1, 'hidden_dim': 64, 'learning_rate': 0.0
 2024-04-28 14:29:44,858 INFO    MainThread:14798 [wandb_run.py:_redirect():2255] Wrapping output streams.
 2024-04-28 14:29:44,858 INFO    MainThread:14798 [wandb_run.py:_redirect():2280] Redirects installed.
 2024-04-28 14:29:44,858 INFO    MainThread:14798 [wandb_init.py:init():842] run started, returning control to user process
+2024-04-28 14:33:43,945 WARNING MsgRouterThr:14798 [router.py:message_loop():77] message_loop has been closed

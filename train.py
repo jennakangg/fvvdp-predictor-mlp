@@ -18,8 +18,8 @@ from sklearn.model_selection import train_test_split
 def load_data(config):
     torch.manual_seed(config['seed'])
 
-    # Initialize the dataset, # TRAINING WORLD RN !!!
-    dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont", "dataset")
+    # Initialize the dataset
+    dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all", "dataset")
 
     train_size = int(len(dataset) * config['train_split'])
     valid_size = len(dataset) - train_size
@@ -36,7 +36,7 @@ def load_data(config):
 def load_data_split_by_view(config):
     torch.manual_seed(config['seed'])
 
-    dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_small", "dataset")
+    dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all", "dataset")
 
     # Get unique camera positions
     unique_camera_positions = dataset.get_unique_camera_position()
@@ -46,8 +46,8 @@ def load_data_split_by_view(config):
 
     print(train_cam_pos)
     print(valid_cam_pos)
-    train_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_small", "dataset", camera_position=train_cam_pos)
-    valid_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_small", "dataset", camera_position=valid_cam_pos)
+    train_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all", "dataset", camera_position=train_cam_pos)
+    valid_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all", "dataset", camera_position=valid_cam_pos)
 
 
     train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, collate_fn=prepare_inputs_and_targets)
@@ -58,8 +58,8 @@ def load_data_split_by_view(config):
 def load_data_1(config):
     torch.manual_seed(config['seed'])
 
-    train_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_small", "dataset")
-    valid_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_small_test", "dataset")
+    train_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all", "dataset")
+    valid_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_5_levels_all_test", "dataset")
 
 
     train_loader = DataLoader(train_dataset, batch_size=config['batch_size'], shuffle=True, collate_fn=prepare_inputs_and_targets)
@@ -70,8 +70,8 @@ def load_data_1(config):
 def load_data_subset(config, num_samples=None):
     torch.manual_seed(config['seed'])
 
-    train_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont", "dataset")
-    valid_dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont_test", "dataset")
+    train_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white", "dataset")
+    valid_dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white_test", "dataset")
 
     if num_samples:
         train_dataset = Subset(train_dataset, range(min(num_samples, len(train_dataset))))
@@ -85,7 +85,7 @@ def load_data_subset(config, num_samples=None):
 def load_data_subset_filtered(config, camera_position, target_ray_dir, num_samples=None):
     torch.manual_seed(config['seed'])
 
-    dataset = LODFvvdpEccentricityContinous("dataset/playroom_lod_ecc_cont", "dataset", camera_position, target_ray_dir)
+    dataset = LODFvvdpEccentricityContinous("dataset/example_lod_ecc_white", "dataset", camera_position, target_ray_dir)
 
     train_size = int(len(dataset) * config['train_split'])
     valid_size = len(dataset) - train_size
@@ -166,8 +166,7 @@ def train_model(model, train_loader, valid_loader, criterion, optimizer, num_epo
         model.train()
         running_loss = 0.0
         total_absolute_error_train = 0.0
-        num_correct = 0.0
-        decreasing_weight = 0.001  # Adjust this weight as needed
+
 
         total_values = 0
 
@@ -175,13 +174,10 @@ def train_model(model, train_loader, valid_loader, criterion, optimizer, num_epo
             inputs, targets = batch
             optimizer.zero_grad()
             outputs = model(inputs)
-            scaled_tanh_outputs = scaled_tanh(outputs)
-            predicted_lods = outputs
+            predicted_lods = outputs * 4
             total_absolute_error_train += custom_absolute_error(predicted_lods, targets)
 
-            num_correct += count_correct_predictions(predicted_lods, targets)
-
-            loss = custom_loss(predicted_lods.float(), targets.float(), decreasing_weight, criterion)
+            loss = criterion(predicted_lods, targets)
             loss.backward()
             optimizer.step()
             running_loss += loss.item()* inputs.size(0)
@@ -203,37 +199,33 @@ def train_model(model, train_loader, valid_loader, criterion, optimizer, num_epo
         avg_train_loss = running_loss / len(train_loader)
         avg_absolute_error_train = total_absolute_error_train / total_values
 
-        num_correct_epoch_fraction = num_correct/total_values * 100
-        wandb.log({'epoch': epoch, 'train_loss': avg_train_loss, 'train_absolute_error': avg_absolute_error_train, 'train_num_correct_ratio': num_correct_epoch_fraction})
+        wandb.log({'epoch': epoch, 'train_loss': avg_train_loss, 'train_absolute_error': avg_absolute_error_train, 
+                   } )
 
-        print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss}, Train Absolute Error: {avg_absolute_error_train:.10f}%, Num correct : {num_correct_epoch_fraction:.4f}%')
+        print(f'Epoch {epoch+1}/{num_epochs}, Train Loss: {avg_train_loss}, Train Absolute Error: {avg_absolute_error_train:.10f}%,')
         
         model.eval()
         running_val_loss = 0.0
         total_absolute_error_val = 0.0
-        num_correct = 0.0
 
         total_values_val = 0
 
         with torch.no_grad():
             for batch in valid_loader:
                 inputs, targets = batch
-                outputs = model(inputs)
-                scaled_tanh_outputs = scaled_tanh(outputs)
-                predicted_lods = outputs
+                outputs = model(inputs) 
+                predicted_lods = outputs * 4
 
-                val_loss = custom_loss(predicted_lods.float(), targets.float(), decreasing_weight, criterion)
+                val_loss = criterion(predicted_lods, targets)
+
                 running_val_loss += val_loss.item()* inputs.size(0)
 
                 total_absolute_error_val += custom_absolute_error(predicted_lods, targets)
             
-                num_correct += count_correct_predictions(predicted_lods, targets)
-
                 total_values_val += len(outputs)
 
         avg_val_loss = running_val_loss / len(valid_loader)
         avg_absolute_error_val = total_absolute_error_val / total_values_val
-        num_correct_epoch_fraction = num_correct/total_values_val * 100
 
         if epoch % 20 == 0:
             
@@ -242,13 +234,14 @@ def train_model(model, train_loader, valid_loader, criterion, optimizer, num_epo
             print("VAL TARGETS")
             print(targets)
 
-        wandb.log({'epoch': epoch, 'val_loss': avg_val_loss, 'val_absolute_error': avg_absolute_error_val, 'val_num_correct_ratio': num_correct_epoch_fraction})
+        wandb.log({'epoch': epoch, 'val_loss': avg_val_loss, 'val_absolute_error': avg_absolute_error_val, 
+                   })
         if epoch == num_epochs-1:
             print("predicted actual!!!")
             print(predicted_lods)
             print("TARGETS")
             print(targets)
-        print(f'Epoch {epoch+1}/{num_epochs}, Validation Loss: {avg_val_loss}, Validation Absolute Error: {avg_absolute_error_val:.10f}%, Num correct : {num_correct_epoch_fraction:.4f}%')
+        print(f'Epoch {epoch+1}/{num_epochs}, Validation Loss: {avg_val_loss}, Validation Absolute Error: {avg_absolute_error_val:.10f}%, ')
 
     
 
@@ -260,13 +253,15 @@ def save_checkpoint(model, epoch, path='checkpoints/model_checkpoint.pth'):
 
     wandb.save(path)
 
+    print("saved checkpoint")
+
 def main():
     # Load configuration
     with open('config.json', 'r') as f:
         config = json.load(f)
 
     import os
-    wandb.init(project='LODMLPPredictor', config=config)
+    wandb.init(project='LODMLPPredictor_HGS_all_level_prediction', config=config)
     os.environ["WANDB_SILENT"] = "true"
 
     config["device"]= "cpu" if not torch.cuda.device_count() else "cuda:0"
@@ -275,7 +270,7 @@ def main():
     model = LowestLODPredictor(input_dim=config['input_dim'], output_dim=config['output_dim'], hidden_dim=config['hidden_dim'])
     model = model.to(config["device"])
 
-    train_loader, valid_loader = load_data_1(config)
+    train_loader, valid_loader = load_data(config)
 
     criterion = nn.MSELoss()  
     optimizer = optim.Adam(model.parameters(), lr=config['learning_rate'], weight_decay=config['weight_decay'])

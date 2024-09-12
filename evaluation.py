@@ -90,12 +90,12 @@ def assemble_image(width, height, camera_pos, ppd):
     patch_size = 32
 
     color_map = {
-        0: (255, 0, 0),    # Red
-        1: (0, 255, 0),    # Green
-        2: (0, 0, 255),    # Blue
-        3: (255, 255, 0),  # Yellow
-        4: (255, 165, 0),  # Orange
-        5: (75, 0, 130)    # Indigo
+        0.0: (255, 0, 0),    # Red
+        0.1: (0, 255, 0),    # Green
+        0.2: (0, 0, 255),    # Blue
+        0.3: (255, 255, 0),  # Yellow
+        0.4: (255, 165, 0),  # Orange
+        0.5: (75, 0, 130)    # Indigo
     }
 
     for i in range(0, width, patch_size):
@@ -120,7 +120,7 @@ def assemble_image(width, height, camera_pos, ppd):
     full_image.save('output_lod_map.png')
     full_image.show()
 
-camera_pos = np.array([ 3.3766, -0.6779, -3.1177]) 
+camera_pos = np.array([-42.0752,   3.3146,  -7.2888]) 
 camera_pos = list(camera_pos/np.linalg.norm(camera_pos))
 
 width = 1024  # Define the width of the image

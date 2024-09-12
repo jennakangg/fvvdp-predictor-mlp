@@ -33,8 +33,8 @@ def prepare_inputs_and_targets(batch):
 
         JOD_array = []
         # should be JOD level 0, level 1, .... ->
-        for level, lod_level_entry in enumerate(reversed(item)):
-            JOD_array.append(lod_level_entry['LOD_value_JOD_less_than_1'])
+        for level, lod_level_entry in enumerate(item):
+            JOD_array.append(lod_level_entry['JOD_average'])
 
 
         input_tensor = torch.cat([cam_pos, ray_dir, eccentricity, theta], dim=1)

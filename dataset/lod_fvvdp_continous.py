@@ -17,7 +17,7 @@ class LODFvvdpEccentricityContinous(Dataset):
         else:
             self.metadata = pd.DataFrame(columns=['camera_position', 'eccentricity', 'theta', 'ray_dir',
                                                   'lod_n_path', 'lod_x_path', 'lod_n', 'lod_x', 'image_name',
-                                                  'levels', 'heatmap_path', 'LOD_value_JOD_less_than_1', 'camera_R', 'camera_T'])
+                                                  'levels', 'heatmap_path', 'JOD_average', 'camera_R', 'camera_T'])
         
         if 'camera_position' in self.metadata.columns:
             self.metadata['camera_position'] = self.metadata['camera_position'].astype(str)
@@ -115,7 +115,7 @@ class LODFvvdpEccentricityContinous(Dataset):
                 'image_name': meta['image_name'],
                 'levels': meta['levels'],
                 'heatmap': heatmap_patch,
-                'LOD_value_JOD_less_than_1': meta['LOD_value_JOD_less_than_1']
+                'JOD_average': meta['JOD_average']
             }
 
         group = [get_item(self.metadata.iloc[i]) for i in indices]
@@ -150,7 +150,7 @@ class LODFvvdpEccentricityContinous(Dataset):
             'image_name': entry_data['image_name'],
             'levels': entry_data['levels'],
             'heatmap_path': heatmap_filename,
-            'LOD_value_JOD_less_than_1': entry_data['LOD_value_JOD_less_than_1']
+            'JOD_average': entry_data['JOD_average']
         }
         new_entry_df = pd.DataFrame([new_entry]) 
         self.metadata = pd.concat([self.metadata, new_entry_df], ignore_index=True)

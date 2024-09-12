@@ -18,8 +18,8 @@ class LODFvvdpEccentricityContinous(Dataset):
             self.metadata = pd.read_csv(metadata_path)
         else:
             self.metadata = pd.DataFrame(columns=['camera_position', 'eccentricity', 'theta', 'ray_dir',
-                                                  'lod_n_path', 'lod_x_path', 'lod_n', 'lod_x', 'view_index',
-                                                  'levels', 'heatmap_path', 'JOD_average'])
+                                                  'lod_n_path', 'lod_x_path', 'lod_n', 'lod_x', 'image_name',
+                                                  'levels', 'heatmap_path', 'LOD_value_JOD_less_than_1'])
 
         self.camera_dataset = CameraParametersDataset(camera_dir)
 
@@ -107,10 +107,10 @@ class LODFvvdpEccentricityContinous(Dataset):
             'lod_n': meta['lod_n'],
             'lod_x': meta['lod_x'],
             'ray_dir': meta['ray_dir'],
-            'view_index': meta['view_index'],
+            'image_name': meta['image_name'],
             'levels': meta['levels'],
             'heatmap': heatmap_patch,
-            'JOD_average': meta['JOD_average']
+            'LOD_value_JOD_less_than_1': meta['LOD_value_JOD_less_than_1']
         }
 
         return sample
@@ -121,9 +121,9 @@ class LODFvvdpEccentricityContinous(Dataset):
 
         entry_data should include:
         - camera_position, eccentricity, ray_dir, lod_n_patch, lod_x_patch,
-          lod_n, lod_x, view_index, pixels_per_deg, levels, heatmap_patch
+          lod_n, lod_x, image_name, pixels_per_deg, levels, heatmap_patch
         """
-        base_filename = f"v{entry_data['view_index']}_e{entry_data['eccentricity']}_t{entry_data['theta']}"
+        base_filename = f"v{entry_data['image_name']}_e{entry_data['eccentricity']}_t{entry_data['theta']}"
         heatmap_filename = os.path.join(self.dataset_dir, f"{base_filename}_heatmap.pt")
         lod_n_filename = os.path.join(self.dataset_dir, f"{base_filename}_lod_n.pt")
         lod_x_filename = os.path.join(self.dataset_dir, f"{base_filename}_lod_x.pt")
@@ -139,7 +139,7 @@ class LODFvvdpEccentricityContinous(Dataset):
                 entry_data['camera_dir'], 
                 entry_data['camera_R'], 
                 entry_data['camera_T'], 
-                entry_data['view_index'])
+                entry_data['image_name'])
 
         # Update the metadata
         new_entry = {
@@ -150,11 +150,11 @@ class LODFvvdpEccentricityContinous(Dataset):
             'lod_x_path': lod_x_filename,
             'lod_n': entry_data['lod_n'],
             'lod_x': entry_data['lod_x'],
-            'view_index': entry_data['view_index'],
+            'image_name': entry_data['image_name'],
             'levels': entry_data['levels'],
             'ray_dir': entry_data['ray_dir'],
             'heatmap_path': heatmap_filename,
-            'JOD_average': entry_data['JOD_average']
+            'LOD_value_JOD_less_than_1': entry_data['LOD_value_JOD_less_than_1']
         }
         new_entry_df = pd.DataFrame([new_entry])  
         self.metadata = pd.concat([self.metadata, new_entry_df], ignore_index=True)
@@ -162,13 +162,13 @@ class LODFvvdpEccentricityContinous(Dataset):
         metadata_path = os.path.join(self.dataset_dir, 'metadata.csv')
         self.metadata.to_csv(metadata_path, index=False)
 
-    def get_all_by_view_index(self, view_index):
+    def get_all_by_image_name(self, image_name):
         """
         Get all dataset items that have the specified view index.
         """
         filtered_samples = []
         for i in range(len(self.metadata)):
-            if self.metadata.iloc[i]['view_index'] == view_index:
+            if self.metadata.iloc[i]['image_name'] == image_name:
                 filtered_samples.append(self.__getitem__(i))
         return filtered_samples
     

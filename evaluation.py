@@ -123,7 +123,7 @@ def assemble_image(width, height, camera_pos, ppd):
 camera_pos = np.array([ 3.3766, -0.6779, -3.1177]) 
 camera_pos = list(camera_pos/np.linalg.norm(camera_pos))
 
-width = 1264  # Define the width of the image
-height = 832  # Define the height of the image
+width = 1024  # Define the width of the image
+height = 690  # Define the height of the image
 ppd = 32 
 assemble_image(width, height, camera_pos, ppd)

@@ -24,6 +24,9 @@ class LowestLODPredictor(nn.Module):
 
         x = self.layer2(x)
         x = self.relu(x)
+
+        x = self.layer3(x)
+        x = self.sigmoid(x)
         
         x = self.output_layer(x)
         return x

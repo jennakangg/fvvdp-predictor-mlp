@@ -11,7 +11,7 @@ class CameraParametersDataset(Dataset):
         if os.path.exists(metadata_path):
             self.metadata = pd.read_csv(metadata_path)
         else:
-            self.metadata = pd.DataFrame(columns=['camera_position', 'view_idx', 'camera_dir', 'camera_R_path', 'camera_T_path'])
+            self.metadata = pd.DataFrame(columns=['camera_position', 'image_name', 'camera_dir', 'camera_R_path', 'camera_T_path'])
 
     def __len__(self):
         return len(self.metadata)
@@ -23,14 +23,14 @@ class CameraParametersDataset(Dataset):
 
         return {
             'camera_position': meta['camera_position'],
-            'view_idx': meta['view_idx'],
+            'image_name': meta['image_name'],
             'camera_dir': meta['camera_dir'],
             'camera_R': camera_R,
             'camera_T': camera_T
         }
 
-    def add_entry(self, camera_position, camera_dir, camera_R, camera_T, view_idx):
-        base_filename = f"v_{view_idx}"
+    def add_entry(self, camera_position, camera_dir, camera_R, camera_T, image_name):
+        base_filename = f"v_{image_name}"
         camera_R_path = os.path.join(self.dataset_dir, f"{base_filename}_R.pt")
         camera_T_path = os.path.join(self.dataset_dir, f"{base_filename}_T.pt")
 
@@ -39,7 +39,7 @@ class CameraParametersDataset(Dataset):
 
         new_entry = {
             'camera_position': camera_position,
-            'view_idx': view_idx,
+            'image_name': image_name,
             'camera_dir': camera_dir,
             'camera_R_path': camera_R_path,
             'camera_T_path': camera_T_path
@@ -60,7 +60,7 @@ class CameraParametersDataset(Dataset):
 
             return {
                 'camera_position': meta['camera_position'],
-                'view_idx': meta['view_idx'],
+                'image_name': meta['image_name'],
                 'camera_dir': meta['camera_dir'],
                 'camera_R': camera_R,
                 'camera_T': camera_T

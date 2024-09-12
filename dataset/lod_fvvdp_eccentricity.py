@@ -17,7 +17,7 @@ class LODFvvdpEccentricity(Dataset):
             self.metadata = pd.read_csv(metadata_path)
         else:
             self.metadata = pd.DataFrame(columns=['camera_position', 'eccentricity', 'theta', 'camera_dir',
-                                                  'lod_n_path', 'lod_x_path', 'lod_n', 'lod_x', 'view_index',
+                                                  'lod_n_path', 'lod_x_path', 'lod_n', 'lod_x', 'image_name',
                                                   'pixels_per_deg', 'levels', 'heatmap_path', 'JOD_average'])
         
         self.ecc_mean, self.ecc_std, self.theta_mean, self.theta_std = self.compute_statistics()
@@ -64,7 +64,7 @@ class LODFvvdpEccentricity(Dataset):
             'lod_n': meta['lod_n'],
             'lod_x': meta['lod_x'],
             'camera_dir': meta['camera_dir'],
-            'view_index': meta['view_index'],
+            'image_name': meta['image_name'],
             'pixels_per_deg': meta['pixels_per_deg'],
             'levels': meta['levels'],
             'heatmap': heatmap_patch,
